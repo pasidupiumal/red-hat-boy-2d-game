@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Red Hat Boy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onkeyup="keyCheck(event)" class="body">
+    <div class="game-container">
+        <div class="background" id="background">
+            <img src="image/Run (1).png" class="boy" id="boy">
+            <div class="score" id="score"> 0 </div>
+
+            <div class="endScreen" id="endScreen">
+                <div>Game Over !</div>
+                <div>Your Score</div>
+                <div class="endScore" id="endScore">0</div>
+                <button class="btn" onclick="reload();">Try Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+
+</html>
