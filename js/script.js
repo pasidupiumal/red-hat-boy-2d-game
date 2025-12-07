@@ -43,7 +43,7 @@ function run() {
     if (runImageNumber == 9) {
         runImageNumber = 1 ;  
     }
-    boy.src = "image/Run ("+ runImageNumber +").png";
+    boy.src = "image/Run"+ runImageNumber +".png";
 }
 
 //boy jump
@@ -90,7 +90,7 @@ function jump() {
             moveBlockWorkerId = setInterval(moveBlock,100);
         }   
     }
-    boy.src = "image/Jump ("+ jumpImageNumber +").png";
+    boy.src = "image/Jump"+ jumpImageNumber +".png";
 }
 
 //background
@@ -194,5 +194,5 @@ function dead (){
         document.getElementById("endScreen").style.visibility ="visible";
         document.getElementById("endScore").innerHTML = newScore;
     }
-    boy.src = "image/Dead (" +deadImageNumber+").png";
+    boy.src = "image/Dead"+ deadImageNumber +".png";
 }
