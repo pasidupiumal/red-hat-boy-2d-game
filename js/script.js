@@ -1,10 +1,10 @@
 //run 
-var runSound = new Audio("../sound/run.mp3");
+var runSound = new Audio("sound/run.mp3");
 runSound.loop = true;
 //jump
-var jumpSound = new Audio("../sound/jump.mp3");
+var jumpSound = new Audio("sound/jump.mp3");
 //dead
-var deadSound = new Audio("../sound/dead.mp3");
+var deadSound = new Audio("sound/dead.mp3");
 
 //Key Event
 function keyCheck(event){
@@ -43,7 +43,7 @@ function run() {
     if (runImageNumber == 9) {
         runImageNumber = 1 ;  
     }
-    boy.src = "../image/Run ("+ runImageNumber +").png";
+    boy.src = "image/Run ("+ runImageNumber +").png";
 }
 
 //boy jump
@@ -90,7 +90,7 @@ function jump() {
             moveBlockWorkerId = setInterval(moveBlock,100);
         }   
     }
-    boy.src = "../image/Jump ("+ jumpImageNumber +").png";
+    boy.src = "image/Jump ("+ jumpImageNumber +").png";
 }
 
 //background
@@ -156,7 +156,7 @@ function moveBlock(){
             // Collision detection - adjusted for the fixed container
             // Block position: margin-top 400px, height 150px (ground level 400-550px)
             // Boy position: margin-top 300px, height approx. 250px (ground level 300-550px)
-            // Collision occurs when boy is low (near 300px) and block is at same horizontal position
+            // Collision occurs when boy is low (near 200px) and block is at same horizontal position
             if (newBlockMarginLeft < 200 & newBlockMarginLeft > 100){
                 // Check if boy is low enough to collide (at ground level)
                 if(boyMarginTop > 240){
@@ -194,5 +194,5 @@ function dead (){
         document.getElementById("endScreen").style.visibility ="visible";
         document.getElementById("endScore").innerHTML = newScore;
     }
-    boy.src = "../image/Dead (" +deadImageNumber+").png";
+    boy.src = "image/Dead (" +deadImageNumber+").png";
 }
